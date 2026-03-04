@@ -1,75 +1,66 @@
-/* Contenedor que fija la barra de navegación */
+/**************** CLASES PARA PÁGINA DE INICIO *********************/
+/* Contenedor que fija la barra de navegación para que esté siempre visible */
 .menu-fijo {
-    position: fixed;
-    top: 16px;
+    position: fixed; /* Mantiene la barra a la vista*/
+    top: 16px;       /* Separa un poco del margen superior*/
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 50;
+    z-index: 50;      /* Asegura que esté por encima de todo los elementos */
 }
-
-/* El diseño de la barra de nav con bordes redondeados */
+/* El diseño de la navbar */
 .contenedor-menu {
     display: flex;
     align-items: center;
-    gap: 84px; /* gap-16 */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
-    backdrop-filter: blur(16px); /* backdrop-blur-lg */
-    border: 1px solid white;
-    height: 80px; /* h-20 */
-    padding: 0 32px; /* px-8 */
-    border-radius: 9999px; /* rounded-full */
-    max-width: 460px; /*  */
+    background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
+    backdrop-filter: blur(16px);     /* fondo transparente con desenfoque */
+    border: 1px solid white;       /* borde blanco de 1 pixel */
+    height: 80px;
+    padding: 0 32px;
+    border-radius: 9999px;          /* bordes totalmente redondeados */
+    max-width: 300px;               /* ancho máximo que queremos que tenga */
     width: 90%;
 }
-
 /* Estilo de los enlaces */
 .enlaces a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* quito el subrayado de los enlaces */
     font-weight: bold;
     margin-right: 20px;
 }
-
 .enlaces a:hover {
-    color: #D1c34F; /* Color amarillo al pasar el ratón */
+    color: #888; /* Color gris al pasar el ratón */
 }
-
-/* Layout Principal (Grid de 2 columnas) */
+/* Elemento principal */
 .stage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;/* creamos dos columnas,  de igual ancho*/
     align-items: center;
     padding: 100px 8% 0; /* pt-24 o pt-36 */
     gap: 20px;
 }
-
-/* Título con efecto inclinado (skew) */
+/* Título con efecto inclinado */
 .titulo-inclinado {
     font-size: 4rem;
     font-weight: bold;
     color: black;
-    transform: translateY(-32px) skewX(6deg); /* -translate-y-8 y skew-x-6 */
+    transform: skewX(6deg); /* inclina el texto lateralmente */
     text-align: right;
     padding: 0 40px;
     line-height: 1;
 }
-
 .descripcion {
     max-width: 500px;
     margin-left: 50px;
 }
-
 .subtitulo {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 .parrafo {
     font-size: 0.9rem;
     margin-top: 16px;
 }
-
 /* Botón estilo píldora */
 .boton-negro {
     display: inline-block;
@@ -78,92 +69,171 @@
     padding: 12px 24px;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s; /* cambio de color suave */
     margin-top: 40px;
 }
-
 .boton-negro:hover {
-    background: #3498db; /* Azul tipo blue-400 */
+    background: #888; /* gris */
 }
-
-/* Imagen con efectos (Hover scale y Transition) */
+/* Imagen con efectos, mis favoritosss */
 .contenedor-foto img {
     width: 100%;
     max-width: 600px;
-    transition: transform 0.7s ease; /* duration-700 */
-    transform: translateX(-16px) translateY(12px); /* translate de Tailwind */
+    transition: transform 0.7s ease; /* fluidez en la animación */
+    transform: translateX(-16px) translateY(12px); /*  se genera el desplazamiento */
 }
-
 .contenedor-foto img:hover {
-    transform: scale(1.3); /* hover:scale-150 era mucho, 1.1 es más sutil */
+    transform: scale(1.3); /* La imagen crece al pasar el cursor, efectazo zoom */
 }
-
 /* Responsive básico */
 @media (max-width: 768px) {
     .stage { grid-template-columns: 1fr; text-align: center; }
     .titulo-inclinado { text-align: center; font-size: 2.5rem; }
     .descripcion { margin: 0 auto; }
 }
-/* Sección general (bg-black, py-32, text-white) */
+/* Sección general  */
 .starting-section {
     background-color: #000;
     color: #fff;
-    padding: 128px 32px; /* py-32 (128px) y px-8 (32px) */
+    padding: 128px 32px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* sensación de relieve */
 }
-
-/* Contenedor flex (sm:flex-row) */
+/* Contenedor flex */
 .starting-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* cambio de dirección */
     align-items: center;
-    gap: 32px; /* gap-8 */
+    gap: 32px; /* espaciado entre elementos */
     max-width: 1200px;
 }
-
 @media (min-width: 768px) {
     .starting-container {
-        flex-direction: row; /* md:flex-row */
+        flex-direction: row; /* pasamos de dos col a 1 */
     }
 }
-
 /* Imagen y sus animaciones (transition, translate, hover:scale) */
 .img-animada {
     width: 100%;
     max-width: 700px;
     height: auto;
-    transition: all 0.7s ease; /* duration-700 */
-    transition-delay: 0.2s; /* delay-200 */
-    transform: translateX(-16px) translateY(12px); /* -translate-x-4 y translate-y-3 */
+    transition: all 0.7s ease; /* duración de la animación */
+    transition-delay: 0.2s; /* retraso  */
+    transform: translateX(-16px) translateY(12px); /* -desplazamiento vertical y horizontal */
 }
-
 .img-animada:hover {
-    transform: scale(1.25); /* hover:scale-125 */
+    transform: scale(1.25); /* escala al pasar el cursor */
 }
-
 /* Estilos de Texto */
 .starting-texto {
     text-align: center;
 }
-
-@media (min-width: 768px) {
-    .starting-texto {
-        text-align: left; /* text-start en md */
-    }
-}
-
 .titulo-starting {
-    font-size: 2.25rem; /* text-4xl */
+    font-size: 2.25rem;
     font-weight: bold;
     margin-bottom: 32px;
 }
-
 .texto-paso, .texto-descripcion {
-    font-size: 1.25rem; /* text-xl */
-    max-width: 36rem; /* max-w-xl */
-    margin: 32px auto 0; /* mt-8 */
+    font-size: 1.25rem;
+    max-width: 36rem;
+    margin: 32px auto 0;
     line-height: 1.6;
 }
+/* Contenedor principal del pie de página */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 50px;
+  display: flex;
+  justify-content: space-between; /* distribuye los elementos con espacio */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer-logo img {
+  width: 120px;
+  filter: brightness(0) invert(1); /* invertimos los colores del logo */
+}
+.footer-contacto {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-contacto p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.iconos-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-nav {
+  display: flex; /* agrupo las columnas de enlaces */
+  gap: 50px;     /* con un espacio de 50px entre ellas. */
+}
+
+.footer-columna h4 {
+  color: #777; /* titulos en gris */
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-columna li {
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-columna li:hover {
+  color: #fff;
+}
+
+.iconos-sociales i {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.iconos-sociales i:hover {
+  color: #888; /* Color gris al pasar el ratón */
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
+    .footer-nav { /*distribución de horizontal a vertical*/
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/**************** CLASES PARA EQUIPO *********************/
+
+/* Aqui se deben poner las clases que se vayan a crear para equipo.html
+
+/**************** CLASES PARA PRODUCTOS*********************/
+
+/* mismo para productos.html */
+
+
+
+
+
