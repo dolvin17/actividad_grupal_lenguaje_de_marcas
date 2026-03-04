@@ -104,3 +104,66 @@
     .titulo-inclinado { text-align: center; font-size: 2.5rem; }
     .descripcion { margin: 0 auto; }
 }
+/* Sección general (bg-black, py-32, text-white) */
+.starting-section {
+    background-color: #000;
+    color: #fff;
+    padding: 128px 32px; /* py-32 (128px) y px-8 (32px) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+}
+
+/* Contenedor flex (sm:flex-row) */
+.starting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* gap-8 */
+    max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+    .starting-container {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+/* Imagen y sus animaciones (transition, translate, hover:scale) */
+.img-animada {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    transition: all 0.7s ease; /* duration-700 */
+    transition-delay: 0.2s; /* delay-200 */
+    transform: translateX(-16px) translateY(12px); /* -translate-x-4 y translate-y-3 */
+}
+
+.img-animada:hover {
+    transform: scale(1.25); /* hover:scale-125 */
+}
+
+/* Estilos de Texto */
+.starting-texto {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .starting-texto {
+        text-align: left; /* text-start en md */
+    }
+}
+
+.titulo-starting {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.texto-paso, .texto-descripcion {
+    font-size: 1.25rem; /* text-xl */
+    max-width: 36rem; /* max-w-xl */
+    margin: 32px auto 0; /* mt-8 */
+    line-height: 1.6;
+}
