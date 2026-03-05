@@ -141,6 +141,56 @@
     margin: 32px auto 0;
     line-height: 1.6;
 }
+/* clases para las tarjetitas explicativas del proceso de renting */
+.tarjeta-experiencia {
+  display: flex;
+  flex-direction: column-reverse; /* imagen encima del texto*/
+  width: 100%;
+  max-width: 22rem;              /* ancho max*/
+  margin-top: 64px;
+  padding-top: 16px;
+}
+
+.contenido-texto {
+  margin: 0 12px;
+  text-align: center;            /* texto centradito */
+}
+
+.titulo-proceso-renting {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.descripcion {
+  padding-bottom: 16px;
+}
+
+.contenedor-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-skew {
+  width: 150px;
+  height: auto;
+  padding-bottom: 16px;
+  transition: transform 0.7s;    /* duración */
+}
+
+/* Efecto al pasar el ratón (hover) */
+.imagen-skew:hover {
+  transform: skewY(12deg);       /* desplazamiento de la imagen tipo monedita */
+}
+
+.big-container {
+    display: flex;             /* alineamos los hijos */
+    flex-direction: row;       /* en columnas */
+    justify-content: center;   /* centramos las tarjetas */
+    gap: 40px;                 /* espacio entre tarjetas */
+    flex-wrap: wrap;           /* si no caben, la siguiente baja automáticamente */
+    padding: 50px 20px;
+}
 /* Contenedor principal del pie de página */
 .footer {
   background-color: #000;
@@ -224,6 +274,7 @@
         gap: 20px;
     }
 }
+
 
 /**************** CLASES PARA EQUIPO *********************/
 
