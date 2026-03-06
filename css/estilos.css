@@ -3,6 +3,7 @@ body {
     /* Fuente moderna y limpia para toda la web */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6; 
+    color: #ffffff;
 }
 
 h1, h2, h3 {
