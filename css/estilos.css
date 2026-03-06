@@ -308,18 +308,21 @@ h1, h2, h3 {
 
 
 body {
-    background-color: #000; /* Fondo negro obligatorio para estilo neón */
+    background-color: #000 !important; /* Fondo negro obligatorio para estilo neón */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #ffffff;
     margin: 0;
 }
 
+
 .contenedor-flexible {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding: 50px 5%;
+    flex-direction: row; /* Pone texto y mapa uno al lado del otro */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, se apilan */
+    padding: 40px;
+    background-color: #000;
 }
 
 .tabla-neon {
@@ -340,6 +343,8 @@ body {
     border: 1px solid #333;
     padding: 10px;
     color: #fff;
+    background-color: #1a1a1a; /* Gris muy oscuro para las celdas */
+
 }
 
 .parallax-header {
