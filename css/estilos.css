@@ -337,18 +337,18 @@ h2 {
     text-transform: uppercase;
 }
 
-/* 3. Tabla con estilo Neón Profesional */
+/* Tabla Neón profesional y brillante */
 .tabla-neon {
-    width: 100%;
-    border-collapse: collapse;
     border: 1px solid var(--neon) !important;
-    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4); /* Brillo más fuerte alrededor de la tabla */
+    width: 85%;
+    margin: 40px auto; /* Centrada y separada */
 }
 
 .tabla-neon th {
     background-color: var(--neon) !important;
-    color: #000 !important;
-    padding: 15px;
+    color: #000 !important; /* Texto negro para contraste perfecto */
+    font-weight: bold;
 }
 
 .tabla-neon td {
@@ -369,4 +369,49 @@ h2 {
     border: 1px solid var(--neon) !important;
     box-shadow: 0 0 10px var(--neon);
     border-radius: 15px;
+}
+
+/* --- MAQUETACIÓN PROFESIONAL UBICACIÓN (Criterio 3) --- */
+
+.contenedor-ubicacion {
+    display: flex;
+    flex-wrap: wrap;       /* Si la pantalla es pequeña, el mapa baja solo */
+    gap: 50px;             /* Espacio elegante entre texto y mapa */
+    justify-content: center;
+    align-items: center;   /* Centra verticalmente texto y mapa */
+    padding: 60px 8%;       /* Margen lateral para que no toque los bordes */
+}
+
+/* Brillo neón en los títulos (Criterio 1 y 5) */
+
+
+/* Mejora la lista para que sea más legible */
+.texto-tienda ul {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+}
+
+.texto-tienda li {
+    font-size: 1.1rem;
+    margin-bottom: 15px; /* Más espacio entre líneas */
+    display: flex;
+    align-items: center;
+    gap: 10px;          /* Espacio entre el emoji y el texto */
+}
+
+.mapa-tienda {
+    flex: 1.5;             /* El mapa es un poco más ancho que el texto */
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajuste del iframe para que sea responsive y elegante */
+.mapa-tienda iframe {
+    width: 100%;
+    max-width: 600px;      /* Evita que se haga gigante en pantallas grandes */
+    height: 400px;
+    border-radius: 20px;   /* Bordes redondeados profesionales */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Borde sutil estilo grupo */
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2); /* Brillo neón suave al mapa */
 }
