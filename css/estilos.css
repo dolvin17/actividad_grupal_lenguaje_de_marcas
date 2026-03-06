@@ -315,6 +315,12 @@ body {
 }
 
 
+/* Definir la variable correctamente */
+:root {
+    --neon: #00ff99; 
+}
+
+
 .contenedor-flexible {
     display: flex;
     flex-direction: row; /* Pone texto y mapa uno al lado del otro */
@@ -331,13 +337,17 @@ body {
     border-collapse: collapse;
     border: 2px solid var(--neon);
     box-shadow: 0 0 15px var(--neon);
+    border: 2px solid var(--neon) !important;
+    margin-top: 30px;
+
 }
 
 .tabla-neon th {
-    background-color: var(--neon);
-    color: #000;
+    background-color: var(--neon) !important;
+    color: #000 !important; /* Texto negro para que resalte en el neón */
     padding: 15px;
 }
+
 
 .tabla-neon td {
     border: 1px solid #333;
@@ -345,6 +355,15 @@ body {
     color: #fff;
     background-color: #1a1a1a; /* Gris muy oscuro para las celdas */
 
+}
+
+
+
+/* Brillo en el Mapa */
+.mapa-container iframe {
+    border: 2px solid var(--neon) !important;
+    box-shadow: 0 0 15px var(--neon);
+    border-radius: 10px;
 }
 
 .parallax-header {
@@ -370,4 +389,18 @@ body {
     transform: translateY(-5px);
     border-color: var(--neon);
     box-shadow: 0 0 15px var(--neon);
+}
+
+
+/* Brillo en las tarjetas de FAQ al pasar el ratón */
+.pregunta-card:hover {
+    border-color: var(--neon) !important;
+    box-shadow: 0 0 20px var(--neon);
+    transform: translateY(-5px);
+}
+
+/* Color neón para los títulos h2 de mis secciones */
+h2 {
+    color: var(--neon);
+    margin-bottom: 20px;
 }
