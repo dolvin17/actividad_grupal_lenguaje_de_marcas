@@ -1,121 +1,19 @@
-/* Contenedor que fija la barra de navegación */
-.menu-fijo {
-    position: fixed;
-    top: 16px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 50;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* El diseño de la barra de nav con bordes redondeados */
-.contenedor-menu {
-    display: flex;
-    align-items: center;
-    gap: 84px; /* gap-16 */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
-    backdrop-filter: blur(16px); /* backdrop-blur-lg */
-    border: 1px solid white;
-    height: 80px; /* h-20 */
-    padding: 0 32px; /* px-8 */
-    border-radius: 9999px; /* rounded-full */
-    max-width: 460px; /*  */
-    width: 90%;
+body { 
+    background-color: #ffffff; 
+    font-family: sans-serif; 
 }
-
-/* Estilo de los enlaces */
-.enlaces a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-.enlaces a:hover {
-    color: #D1c34F; /* Color amarillo al pasar el ratón */
-}
-
-/* Layout Principal (Grid de 2 columnas) */
-.stage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 100px 8% 0; /* pt-24 o pt-36 */
-    gap: 20px;
-}
-
-/* Título con efecto inclinado (skew) */
-.titulo-inclinado {
-    font-size: 4rem;
-    font-weight: bold;
-    color: black;
-    transform: translateY(-32px) skewX(6deg); /* -translate-y-8 y skew-x-6 */
-    text-align: right;
-    padding: 0 40px;
-    line-height: 1;
-}
-
-.descripcion {
-    max-width: 500px;
-    margin-left: 50px;
-}
-
-.subtitulo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.parrafo {
-    font-size: 0.9rem;
-    margin-top: 16px;
-}
-
-/* Botón estilo píldora */
-.boton-negro {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s;
-    margin-top: 40px;
-}
-
-.boton-negro:hover {
-    background: #3498db; /* Azul tipo blue-400 */
-}
-
-/* Imagen con efectos (Hover scale y Transition) */
-.contenedor-foto img {
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.7s ease; /* duration-700 */
-    transform: translateX(-16px) translateY(12px); /* translate de Tailwind */
-}
-
-.contenedor-foto img:hover {
-    transform: scale(1.3); /* hover:scale-150 era mucho, 1.1 es más sutil */
-}
-
-/* Responsive básico */
-@media (max-width: 768px) {
-    .stage { grid-template-columns: 1fr; text-align: center; }
-    .titulo-inclinado { text-align: center; font-size: 2.5rem; }
-    .descripcion { margin: 0 auto; }
-}
-/*SECCIÓN DE PRODUCTOS  */
 
 .contenedor-productos {
-    padding: 120px 8% 50px; /* Padding superior alto para no chocar con el menú fijo */
+    padding: 80px 5%;
     text-align: center;
 }
 
 .titulo-seccion {
-    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
 .grid-productos {
@@ -123,74 +21,88 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
+/*ESTILO DE TARJETA*/
 .tarjeta {
-    width: 280px;
+    width: 340px;
+    background: white; 
     border: 2px solid black;
     border-radius: 20px;
     overflow: hidden;
-    background: white;
-    box-shadow: 6px 6px 0px black; /* Sombra sólida estilo RentEZ */
+    box-shadow: 6px 6px 0px black;
     text-align: left;
-    transition: 0.3s;
 }
 
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-
+/* PARTE DE ARRIBA */
 .contenedor-img-producto {
-    background: #000000; /* Negro muy profundo */
-    border-bottom: 2px solid #d8d0e6; /* Color cian neón */
-    box-shadow: inset 0 0 20px #ffffff; /* Brillo hacia adentro */
+    background: #000000;
+    height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    position: relative;
 }
 
+/* La imagen con luz blanca para que la imagen resalte */
 .contenedor-img-producto img {
-    filter: drop-shadow(0 0 15px #dde1db); /* Brillo rosa neón detrás del objeto */
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 85%;
+    max-height: 85%;
     object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
 }
+
+/* SOMBREADO NEÓN AZUL  */
+
+.tarjeta.neon-azul .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+/*  SOMBREADO NEÓN ROSA */
+.tarjeta.neon-rosa .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+/* SOMBREADO NEÓN ROJO */
+.tarjeta.neon-rojo .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+/* PARTE DE ABAJO*/
 .info-card {
     padding: 20px;
+    background: white;
 }
 
 .info-card h3 {
-    font-size: 1.1rem;
-    margin: 0 0 10px 0;
-}
-
-.precio-negro {
-    color: #162129;
-    font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.ubicacion, .usuario {
-    font-size: 0.85rem;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
+.precio-negro {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
 }
 
-/* Estilo para el icono de la ubicación*/
+.detalle {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* ICONOS PEQUEÑOS */
 .icono-pequeno {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    vertical-align: middle;
-    display: inline-block;
+    width: 22px !important;
+    height: 22px !important;
+    margin-right: 10px;
     object-fit: contain;
 }
 
 .boton-alquiler {
-    display: block;
+    display: inline-block;
     margin-top: 15px;
     color: black;
     font-weight: bold;
