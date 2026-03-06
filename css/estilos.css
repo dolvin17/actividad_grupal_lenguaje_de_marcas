@@ -315,29 +315,50 @@
     padding: 10px;
 }
 
-/* Criterio 4: Efecto Parallax para la página de FAQ */
-.seccion-parallax {
-    height: 400px;
+/* Efecto Parallax (Criterio 4) */
+.parallax-header {
+    height: 50vh;
     background-image: url('../assets/snowboard2.jpg'); 
-    background-attachment: fixed; /* ESTO HACE EL EFECTO PARALLAX */
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--neon);
 }
 
-/* Criterio 5: Animaciones para las FAQ */
+/* Animaciones de las tarjetas (Criterio 5) */
 .pregunta-card {
-    border: 1px solid #333;
-    margin: 15px;
+    background: #1a1a1a;
+    margin: 20px;
     padding: 20px;
-    transition: all 0.3s ease; /* Prepara la animación */
+    border: 1px solid #333;
+    transition: all 0.4s ease; /* Duración de la animación */
 }
 
 .pregunta-card:hover {
-    transform: scale(1.05); /* La ficha se agranda (Animación) */
-    border-color: var(--color-neon);
-    box-shadow: 0 0 10px var(--color-neon);
+    transform: translateY(-10px); /* La tarjeta sube al pasar el ratón */
+    border-color: var(--neon);
+    box-shadow: 0 0 20px var(--neon);
 }
 
+/* Estilo para la tabla neón */
+.tabla-neon {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid var(--neon);
+}
+
+.tabla-neon th {
+    background: var(--neon);
+    color: black;
+    padding: 10px;
+}
+
+/* Filtro oscuro para el mapa */
+iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(0.8);
+    border: 1px solid var(--neon) !important;
+}
