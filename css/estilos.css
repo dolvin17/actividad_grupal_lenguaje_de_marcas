@@ -285,6 +285,47 @@
 /* mismo para productos.html */
 
 
+/*****CLASES PARA UBICACIÓN Y FAQ'S******/
+
+/* --- Estilos para la tabla (Criterio 2) --- */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* --- Efecto Parallax (Criterio 4) --- */
+.parallax-bg {
+    height: 300px;
+    background-image: url('../assets/montaña.jpg'); /* Asegúrate de tener esta ruta */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* --- Animaciones (Criterio 5) --- */
+.faq-card {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+
+.faq-card:hover {
+    transform: scale(1.05); /* Se agranda un poco al pasar el ratón */
+    background-color: #f0f8ff;
+}
 
 
 
