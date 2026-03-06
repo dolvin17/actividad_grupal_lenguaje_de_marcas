@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ubicación y Tarifas - Renting Sport</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Nuestra Tienda</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Dónde estamos?</h2>
+            <p>Visítanos en el pie de pista de Sierra Nevada. Ofrecemos:</p>
+            <ul>
+                <li>Atención personalizada 24/7.</li>
+                <li>Equipos de última generación.</li>
+                <li>Seguro de accidentes incluido.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tarifas de Alquiler</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Precio/Día</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pack Esquí Pro</td><td>35€</td></tr>
+                    <tr><td>Pack Snowboard</td><td>30€</td></tr>
+                    <tr><td>Botas Sueltas</td><td>12€</td></tr>
+                    <tr><td>Casco y Protecciones</td><td>8€</td></tr>
+                    <tr><td>Esquís Infantiles</td><td>20€</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Participante: [Tu Nombre] - Actividad HTML+CSS [cite: 1, 16]</p>
+    </footer>
+</body>
+</html>
