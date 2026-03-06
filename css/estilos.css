@@ -317,12 +317,12 @@ h1, h2, h3 {
     border-collapse: collapse;
     border: 2px solid var(--color-neon); /* Borde neón obligatorio */
     box-shadow: 0 0 15px var(--color-neon); /* Efecto de brillo */
-    color: white;
+    color: black;
 }
 
 .tabla-precios th {
     background-color: var(--color-neon);
-    color: white;
+    color: black;
     padding: 15px;
 }
 
@@ -369,7 +369,7 @@ h1, h2, h3 {
 
 .tabla-neon th {
     background: var(--neon);
-    color: white;
+    color: black;
     padding: 10px;
 }
 
