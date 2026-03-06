@@ -317,7 +317,7 @@ h1, h2, h3 {
     border-collapse: collapse;
     border: 2px solid var(--color-neon); /* Borde neón obligatorio */
     box-shadow: 0 0 15px var(--color-neon); /* Efecto de brillo */
-    color: black;
+    color: white;
 }
 
 .tabla-precios th {
