@@ -6,6 +6,7 @@ body {
     color: #ffffff;
 }
 
+
 h1, h2, h3 {
     /* Fuente con más peso para los títulos */
     font-family: 'Arial Black', sans-serif;
@@ -304,6 +305,15 @@ h1, h2, h3 {
 /*****CLASES PARA UBICACIÓN Y FAQ'S******/
 
 /****ESTILOS CREADOS POR CYNTHIA Cumpliendo Criterios 1, 2, 4 y 5****/
+
+
+body {
+    background-color: #000; /* Fondo negro obligatorio para estilo neón */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
 
 /* Criterio 1 y 2: Colores y Uniformidad */
 :root {
