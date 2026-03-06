@@ -1,4 +1,19 @@
+
+body {
+    /* Fuente moderna y limpia para toda la web */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; 
+}
+
+h1, h2, h3 {
+    /* Fuente con más peso para los títulos */
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase; /* Títulos en mayúsculas para un look más deportivo */
+    letter-spacing: 2px; /* Espaciado entre letras para el estilo neón */
+}
+
 /**************** CLASES PARA PÁGINA DE INICIO *********************/
+
 /* Contenedor que fija la barra de navegación para que esté siempre visible */
 .menu-fijo {
     position: fixed; /* Mantiene la barra a la vista*/
