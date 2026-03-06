@@ -314,93 +314,59 @@ body {
     margin: 0;
 }
 
+/**************** ESTILOS FINALES DE CYNTHIA *********************/
 
-/* Definir la variable correctamente */
+/* 1. Efecto Cristal (Glassmorphism) para tus secciones */
+.texto-ubicacion, .pregunta-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Transparencia estilo grupo */
+    backdrop-filter: blur(10px);               /* Desenfoque de fondo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde fino blanco */
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+/* 2. Recuperar y potenciar el Neón */
 :root {
     --neon: #00ff99; 
 }
 
-
-.contenedor-flexible {
-    display: flex;
-    flex-direction: row; /* Pone texto y mapa uno al lado del otro */
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; /* Si la pantalla es pequeña, se apilan */
-    padding: 40px;
-    background-color: #000;
+h2 {
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon); /* Brillo en títulos */
+    text-transform: uppercase;
 }
 
+/* 3. Tabla con estilo Neón Profesional */
 .tabla-neon {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
     border-collapse: collapse;
-    border: 2px solid var(--neon);
-    box-shadow: 0 0 15px var(--neon);
-    border: 2px solid var(--neon) !important;
-    margin-top: 30px;
-
+    border: 1px solid var(--neon) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
 }
 
 .tabla-neon th {
     background-color: var(--neon) !important;
-    color: #000 !important; /* Texto negro para que resalte en el neón */
+    color: #000 !important;
     padding: 15px;
 }
 
-
 .tabla-neon td {
     border: 1px solid #333;
-    padding: 10px;
+    padding: 12px;
     color: #fff;
-    background-color: #1a1a1a; /* Gris muy oscuro para las celdas */
-
 }
 
-
-
-/* Brillo en el Mapa */
-.mapa-container iframe {
-    border: 2px solid var(--neon) !important;
-    box-shadow: 0 0 15px var(--neon);
-    border-radius: 10px;
-}
-
-.parallax-header {
-    height: 400px;
-    background-image: url('../assets/snowboard2.jpg'); 
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pregunta-card {
-    background: #111;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #333;
-    transition: 0.4s;
-}
-
-.pregunta-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon);
-    box-shadow: 0 0 15px var(--neon);
-}
-
-
-/* Brillo en las tarjetas de FAQ al pasar el ratón */
+/* 4. Animación en FAQ (Criterio 5) */
 .pregunta-card:hover {
     border-color: var(--neon) !important;
     box-shadow: 0 0 20px var(--neon);
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Movimiento suave */
 }
 
-/* Color neón para los títulos h2 de mis secciones */
-h2 {
-    color: var(--neon);
-    margin-bottom: 20px;
+/* 5. Ajuste del Mapa */
+.mapa-container iframe {
+    border: 1px solid var(--neon) !important;
+    box-shadow: 0 0 10px var(--neon);
+    border-radius: 15px;
 }
