@@ -1,5 +1,8 @@
 /**************** CLASES PARA PÁGINA DE INICIO *********************/
 /* Contenedor que fija la barra de navegación para que esté siempre visible */
+body {
+    font-family: "Roboto", sans-serif;
+}
 .menu-fijo {
     position: fixed; /* Mantiene la barra a la vista*/
     top: 16px;       /* Separa un poco del margen superior*/
