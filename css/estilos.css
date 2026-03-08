@@ -463,12 +463,293 @@
         gap: 20px;
     }
 }
+/*MARIA*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    background-color: #ffffff; 
+    font-family: sans-serif; 
+}
+
+.contenedor-productos {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.titulo-seccion {
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.grid-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/*ESTILO DE TARJETA*/
+.tarjeta {
+    width: 340px;
+    background: white; 
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 6px 6px 0px black;
+    text-align: left;
+}
+
+/* PARTE DE ARRIBA */
+.contenedor-img-producto {
+    background: #000000;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* La imagen con luz blanca para que la imagen resalte */
+.contenedor-img-producto img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+}
+
+/* SOMBREADO NEÓN AZUL  */
+
+.tarjeta.neon-azul .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+/*  SOMBREADO NEÓN ROSA */
+.tarjeta.neon-rosa .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+/* SOMBREADO NEÓN ROJO */
+.tarjeta.neon-rojo .contenedor-img-producto {
+    box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+/* PARTE DE ABAJO*/
+.info-card {
+    padding: 20px;
+    background: white;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.precio-negro {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.detalle {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* ICONOS PEQUEÑOS */
+.icono-pequeno {
+    width: 22px !important;
+    height: 22px !important;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.boton-alquiler {
+    display: inline-block;
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*  DISEÑO PAGINA EQUIPO: RESPETANDO PALETA DE COLORES */
+
+.tarjeta.equipo-negro {
+    background: #000000 !important; 
+    border: 2px solid #333;
+    box-shadow: 6px 6px 0px #222; 
+}
 
 
-/**************** CLASES PARA EQUIPO *********************/
+.contenedor-img-equipo {
+    background: #ffffff; /* Fondo del círculo blanco */
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 30px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
 
-/* Aqui se deben poner las clases que se vayan a crear para equipo.html */
+/* HALOS NEÓN SOBRE EL CÍRCULO BLANCO  RESPETANDO PALETA DE COLORES CONJUNTA */
+.tarjeta.neon-azul .contenedor-img-equipo { box-shadow: 0 0 20px rgba(0, 243, 255, 0.8); }
+.tarjeta.neon-rojo .contenedor-img-equipo { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
 
-/**************** CLASES PARA PRODUCTOS*********************/
+.foto-equipo, .foto-equipo2 {
+    width: 70% !important;
+    height: 70% !important;
+    object-fit: contain !important;
+}
 
-/* mismo para productos.html */
+.info-card-equipo {
+    padding: 20px;
+    text-align: left;
+    color: white; /* Todo el texto en blanco */
+}
+
+.info-card-equipo h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.info-card-equipo .puesto {
+    font-size: 1rem;
+    color: #bbb; 
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.info-card-equipo .datos p {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icono-blanco {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    filter: invert(1); 
+}
+
+/* ACCESO: */
+
+.contenedor-acceso {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.grid-acceso {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;     /* Esta funcionalidad permite bajar en móviles si no caben */
+    justify-content: center;
+    gap: 50px;         
+    margin-top: 40px;
+}
+
+.tarjeta.acceso.invertida {
+    width: 350px;
+    background: #000000; 
+    border: 2px solid black;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 8px 8px 0px black;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+}
+
+/* Efecto de movimiento como en el tipo producto */
+.tarjeta.acceso.invertida:hover {
+    transform: translateY(-15px);
+    box-shadow: 12px 12px 0px black;
+}
+
+.header-blanco {
+    background: #ffffff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+}
+
+.icono-tech {
+    width: 50% !important;
+    height: 50% !important;
+    object-fit: contain;
+}
+
+/* Halos neón sobre fondo blanco para respetar paleta de color */
+.neon-azul .icono-tech { filter: drop-shadow(0 0 12px rgba(0, 243, 255, 0.8)); }
+.neon-rosa .icono-tech { filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.8)); }
+
+.cuerpo-negro {
+    padding: 30px;
+    color: white;
+}
+
+.cuerpo-negro h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.form-acceso {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px;
+    background: #111111;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.neon-azul input:focus { border-color: #00f3ff; box-shadow: 0 0 10px rgba(0, 243, 255, 0.4); }
+.neon-rosa input:focus { border-color: #ff00ff; box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); }
+
+.boton-blanco {
+    width: 100%;
+    padding: 15px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 4px 4px 0px #333;
+    transition: all 0.2s;
+}
+
+.boton-blanco:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111;
+}
