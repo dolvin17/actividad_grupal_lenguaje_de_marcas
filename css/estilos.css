@@ -108,7 +108,7 @@ body {
     font-weight: bold;
     text-decoration: underline;
 }
-/*  DISEÑO PAGINA EQUIPO: RESPETANDO PALETA DE COLORES RECUADRO NEGRO / CÍRCULO BLANCO --- */
+/*  DISEÑO PAGINA EQUIPO: RESPETANDO PALETA DE COLORES */
 
 .tarjeta.equipo-negro {
     background: #000000 !important; 
@@ -171,4 +171,119 @@ body {
     height: 18px;
     margin-right: 10px;
     filter: invert(1); 
+}
+
+/* ACCESO: */
+
+.contenedor-acceso {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.grid-acceso {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;     /* Esta funcionalidad permite bajar en móviles si no caben */
+    justify-content: center;
+    gap: 50px;         
+    margin-top: 40px;
+}
+
+.tarjeta.acceso.invertida {
+    width: 350px;
+    background: #000000; 
+    border: 2px solid black;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 8px 8px 0px black;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+}
+
+/* Efecto de movimiento como en el tipo producto */
+.tarjeta.acceso.invertida:hover {
+    transform: translateY(-15px);
+    box-shadow: 12px 12px 0px black;
+}
+
+.header-blanco {
+    background: #ffffff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+}
+
+.icono-tech {
+    width: 50% !important;
+    height: 50% !important;
+    object-fit: contain;
+}
+
+/* Halos neón sobre fondo blanco para respetar paleta de color */
+.neon-azul .icono-tech { filter: drop-shadow(0 0 12px rgba(0, 243, 255, 0.8)); }
+.neon-rosa .icono-tech { filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.8)); }
+
+.cuerpo-negro {
+    padding: 30px;
+    color: white;
+}
+
+.cuerpo-negro h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.form-acceso {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px;
+    background: #111111;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.neon-azul input:focus { border-color: #00f3ff; box-shadow: 0 0 10px rgba(0, 243, 255, 0.4); }
+.neon-rosa input:focus { border-color: #ff00ff; box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); }
+
+.boton-blanco {
+    width: 100%;
+    padding: 15px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 4px 4px 0px #333;
+    transition: all 0.2s;
+}
+
+.boton-blanco:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111;
 }
