@@ -20,16 +20,16 @@ body {
 }
 /* El diseño de la navbar */
 .contenedor-menu {
-  display: flex;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
-  backdrop-filter: blur(16px); /* fondo transparente con desenfoque */
-  border: 1px solid white; /* borde blanco de 1 pixel */
-  height: 80px;
-  padding: 0 32px;
-  border-radius: 9999px; /* bordes totalmente redondeados */
-  max-width: 490px; /* ancho máximo que queremos que tenga */
-  width: 90%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
+    backdrop-filter: blur(16px);     /* fondo transparente con desenfoque */
+    border: 1px solid white;       /* borde blanco de 1 pixel */
+    height: 80px;
+    padding: 0 32px;
+    border-radius: 9999px;          /* bordes totalmente redondeados */
+    max-width: 600px;               /* ancho máximo que queremos que tenga */
+    width: 90%;
 }
 /* Estilo de los enlaces */
 .enlaces a {
@@ -73,21 +73,49 @@ body {
   margin-right: auto;
 }
 
-/* Botón estilo píldora */
-.boton-negro {
-  display: inline-block;
-  background: black;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: 0.3s; /* cambio de color suave */
-  margin-top: 40px;
-}
-.boton-negro:hover {
-  background: #888; /* gris */
+/* Contenedor de botones */
+.contenedor-botones {
+    display: flex;
+    gap: 15px;            /* Espacio entre botones */
+    margin-top: 30px;
+    flex-wrap: wrap;      /* Para que en móviles muy pequeños bajen uno al otro */
 }
 
+/* Botón principal (Negro) */
+.boton-negro {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2px solid black;
+}
+
+.boton-negro:hover {
+    background: #444;
+    border-color: #444;
+}
+
+/* Botón secundario (Solo borde) */
+.boton-linea {
+    display: inline-block;
+    background: transparent;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid black; /* Solo el contorno */
+    transition: 0.3s ease;
+}
+
+.boton-linea:hover {
+    background: black;
+    color: white;
+}
 /* ==========================================================================
    4. SECCIONES HERO Y PROCESO (USO EN TODAS LAS PÁGINAS)
    ========================================================================== */
@@ -162,16 +190,15 @@ body {
   text-align: center;
 }
 .titulo-starting {
-  font-size: 2.25rem;
-  font-weight: bold;
-  margin-bottom: 32px;
+    font-size: 1.8 rem;
+    font-weight: bold;
+    margin-bottom: 24px;
 }
-.texto-paso,
-.texto-descripcion {
-  font-size: 1.25rem;
-  max-width: 36rem;
-  margin: 32px auto 0;
-  line-height: 1.6;
+.texto-paso, .texto-descripcion {
+    font-size: 1rem;
+    max-width: 30rem;
+    margin: 20px auto 0;
+    line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -226,9 +253,9 @@ body {
 
 /* Contenedor principal para dar espacio */
 .contenedor-carrusel {
-  margin-top: 100px;
-  position: relative;
-  padding: 20px 0;
+    margin-top: none;
+    position: relative;
+    padding: 20px 0;
 }
 
 /* El área de deslizamiento que contiene las tarjetas */
@@ -307,8 +334,8 @@ body {
 }
 
 .parrafo {
-  font-size: 0.9rem;
-  margin-top: 16px;
+    font-size: 1rem;
+    margin-top: 16px;
 }
 
 /* Imagen con efectos, mis favoritosss */
@@ -713,6 +740,58 @@ body {
   border-radius: 24px;
   padding: 40px;
   color: white;
+}
+/* --- ESTILO RECUADRO INFERIOR EQUIPO --- */
+
+.recuadro-equipo-completo {
+    width: 100%;
+    max-width: 1080px; /* Suma de 3 tarjetas (340px) + gaps (30px) */
+    margin: 40px auto 0;
+    background: #000000;
+    border: 2px solid #333;
+    border-radius: 24px;
+    box-shadow: 8px 8px 0px #000;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.recuadro-equipo-completo:hover {
+    transform: translateY(-5px);
+}
+
+.contenido-recuadro {
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.contenido-recuadro h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contenido-recuadro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bbbbbb;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Efecto de halo neón sutil para el recuadro largo */
+.recuadro-equipo-completo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
 }
 
 /* --- ACCESO Y REGISTRO --- */
