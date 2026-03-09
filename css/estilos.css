@@ -1,200 +1,196 @@
 /* ==========================================================================
    1. CONFIGURACIÓN GLOBAL
    ========================================================================== */
-   body {
-       font-family: "Roboto", sans-serif;
-       margin: 0;
-       padding: 0;
-    }
-    /* ==========================================================================
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* ==========================================================================
     2. NAVEGACIÓN (HEADER)
     ========================================================================== */
-    /* Contenedor que fija la barra de navegación para que esté siempre visible */
+/* Contenedor que fija la barra de navegación para que esté siempre visible */
 .menu-fijo {
-    position: fixed; /* Mantiene la barra a la vista*/
-    top: 16px;       /* Separa un poco del margen superior*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 50;      /* Asegura que esté por encima de todo los elementos */
+  position: fixed; /* Mantiene la barra a la vista*/
+  top: 16px; /* Separa un poco del margen superior*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 50; /* Asegura que esté por encima de todo los elementos */
 }
 /* El diseño de la navbar */
 .contenedor-menu {
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
-    backdrop-filter: blur(16px);     /* fondo transparente con desenfoque */
-    border: 1px solid white;       /* borde blanco de 1 pixel */
-    height: 80px;
-    padding: 0 32px;
-    border-radius: 9999px;          /* bordes totalmente redondeados */
-    max-width: 490px;               /* ancho máximo que queremos que tenga */
-    width: 90%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
+  backdrop-filter: blur(16px); /* fondo transparente con desenfoque */
+  border: 1px solid white; /* borde blanco de 1 pixel */
+  height: 80px;
+  padding: 0 32px;
+  border-radius: 9999px; /* bordes totalmente redondeados */
+  max-width: 490px; /* ancho máximo que queremos que tenga */
+  width: 90%;
 }
 /* Estilo de los enlaces */
 .enlaces a {
-    color: white;
-    text-decoration: none; /* quito el subrayado de los enlaces */
-    font-weight: bold;
-    margin-right: 20px;
+  color: white;
+  text-decoration: none; /* quito el subrayado de los enlaces */
+  font-weight: bold;
+  margin-right: 20px;
 }
 .enlaces a:hover {
-    color: #888; /* Color gris al pasar el ratón */
+  color: #888; /* Color gris al pasar el ratón */
 }
 /* ==========================================================================
    3. COMPONENTES REUTILIZABLES
    ========================================================================== */
-   .big-container {
-    display: flex;             /* alineamos los hijos */
-    flex-direction: row;       /* en columnas */
-    justify-content: center;   /* centramos las tarjetas */
-    gap: 40px;                 /* espacio entre tarjetas */
-    flex-wrap: wrap;           /* si no caben, la siguiente baja automáticamente */
-    padding: 50px 20px;
+.big-container {
+  display: flex; /* alineamos los hijos */
+  flex-direction: row; /* en columnas */
+  justify-content: center; /* centramos las tarjetas */
+  gap: 40px; /* espacio entre tarjetas */
+  flex-wrap: wrap; /* si no caben, la siguiente baja automáticamente */
+  padding: 50px 20px;
 }
 
 /* Corrección para permitir fondos oscuros */
 .big-container.fondo-oscuro {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 /* Corrección para permitir fondos oscuros */
 .big-container.fondo-oscuro {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 
 /* Ajuste de los títulos dentro del fondo oscuro */
 .big-container.fondo-oscuro .titulo-starting {
-    color: #fff;
-    width: 100%;       /* Asegura que el título ocupe todo el ancho para poder centrarse */
-    margin-left: auto;
-    margin-right: auto;
+  color: #fff;
+  width: 100%; /* Asegura que el título ocupe todo el ancho para poder centrarse */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Botón estilo píldora */
 .boton-negro {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s; /* cambio de color suave */
-    margin-top: 40px;
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s; /* cambio de color suave */
+  margin-top: 40px;
 }
 .boton-negro:hover {
-    background: #888; /* gris */
+  background: #888; /* gris */
 }
 
 /* ==========================================================================
    4. SECCIONES HERO Y PROCESO (USO EN TODAS LAS PÁGINAS)
    ========================================================================== */
 
-
 /* Elemento principal */
 .stage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;/* creamos dos columnas,  de igual ancho*/
-    align-items: center;
-    padding: 100px 8% 0; /* pt-24 o pt-36 */
-    gap: 20px;
-    margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* creamos dos columnas,  de igual ancho*/
+  align-items: center;
+  padding: 100px 8% 0; /* pt-24 o pt-36 */
+  gap: 20px;
+  margin-bottom: 10px;
 }
 /* Título con efecto inclinado */
 .titulo-inclinado {
-    font-size: 4rem;
-    font-weight: bold;
-    color: black;
-    transform: skewX(6deg); /* inclina el texto lateralmente */
-    text-align: right;
-    padding: 0 40px;
-    line-height: 1;
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+  transform: skewX(6deg); /* inclina el texto lateralmente */
+  text-align: right;
+  padding: 0 40px;
+  line-height: 1;
 }
 .descripcion {
-    max-width: 500px;
-    margin-left: 50px;
+  max-width: 500px;
+  margin-left: 50px;
 }
 .subtitulo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Sección general  */
 .starting-section {
-    background-color: #000;
-    color: #fff;
-    padding: 128px 32px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* sensación de relieve */
+  background-color: #000;
+  color: #fff;
+  padding: 128px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* sensación de relieve */
 }
 /* Contenedor flex */
 .starting-container {
-    display: flex;
-    flex-direction: column; /* cambio de dirección */
-    align-items: center;
-    gap: 32px; /* espaciado entre elementos */
-    max-width: 1200px;
+  display: flex;
+  flex-direction: column; /* cambio de dirección */
+  align-items: center;
+  gap: 32px; /* espaciado entre elementos */
+  max-width: 1200px;
 }
 @media (min-width: 768px) {
-    .starting-container {
-        flex-direction: row; /* pasamos de dos col a 1 */
-    }
-    
+  .starting-container {
+    flex-direction: row; /* pasamos de dos col a 1 */
+  }
 }
-
 
 /* Imagen y sus animaciones (transition, translate, hover:scale) */
 .img-animada {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    transition: all 0.7s ease; /* duración de la animación */
-    transition-delay: 0.2s; /* retraso  */
-    transform: translateX(-16px) translateY(12px); /* -desplazamiento vertical y horizontal */
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  transition: all 0.7s ease; /* duración de la animación */
+  transition-delay: 0.2s; /* retraso  */
+  transform: translateX(-16px) translateY(12px); /* -desplazamiento vertical y horizontal */
 }
 .img-animada:hover {
-    transform: scale(1.25); /* escala al pasar el cursor */
+  transform: scale(1.25); /* escala al pasar el cursor */
 }
-
 
 /* Estilos de Texto */
 .starting-texto {
-    text-align: center;
+  text-align: center;
 }
 .titulo-starting {
-    font-size: 2.25rem;
-    font-weight: bold;
-    margin-bottom: 32px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 32px;
 }
-.texto-paso, .texto-descripcion {
-    font-size: 1.25rem;
-    max-width: 36rem;
-    margin: 32px auto 0;
-    line-height: 1.6;
+.texto-paso,
+.texto-descripcion {
+  font-size: 1.25rem;
+  max-width: 36rem;
+  margin: 32px auto 0;
+  line-height: 1.6;
 }
 
 /* ==========================================================================
    5. TARJETAS DE EXPERIENCIA / RESEÑAS
    ========================================================================== */
 
-
 /* clases para las tarjetitas explicativas del proceso de renting */
 .tarjeta-experiencia {
   display: flex;
   flex-direction: column-reverse; /* imagen encima del texto*/
   width: 100%;
-  max-width: 22rem;              /* ancho max*/
+  max-width: 22rem; /* ancho max*/
   margin-top: 64px;
   padding-top: 16px;
 }
 
 .contenido-texto {
   margin: 0 12px;
-  text-align: center;            /* texto centradito */
+  text-align: center; /* texto centradito */
 }
 
 .titulo-proceso-renting {
@@ -211,14 +207,13 @@
   width: 150px;
   height: auto;
   padding-bottom: 16px;
-  transition: transform 0.7s;    /* duración */
+  transition: transform 0.7s; /* duración */
 }
 
 /* Efecto al pasar el ratón (hover) */
 .imagen-skew:hover {
-  transform: skewY(12deg);       /* desplazamiento de la imagen tipo monedita */
+  transform: skewY(12deg); /* desplazamiento de la imagen tipo monedita */
 }
-
 
 .contenedor-imagen {
   display: flex;
@@ -231,106 +226,114 @@
 
 /* Contenedor principal para dar espacio */
 .contenedor-carrusel {
-    margin-top: 100px;
-    position: relative;
-    padding: 20px 0;
+  margin-top: 100px;
+  position: relative;
+  padding: 20px 0;
 }
 
 /* El área de deslizamiento que contiene las tarjetas */
 .deslizador-carrusel {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Oculta las tarjetas que no están activas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Oculta las tarjetas que no están activas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Ocultar todas las tarjetas por defecto */
 .deslizador-carrusel .diapositiva {
-    display: none;
-    width: 100%;
-    /* Reutilizamos el estilo de tus tarjetas estáticas */
-    transition: opacity 0.6s ease-in-out;
+  display: none;
+  width: 100%;
+  /* Reutilizamos el estilo de tus tarjetas estáticas */
+  transition: opacity 0.6s ease-in-out;
 }
 
 /* Mostrar solo la tarjeta 'aktif' */
 .deslizador-carrusel .diapositiva.aktif {
-    display: flex; /* Mantiene la alineación de tus tarjetas */
+  display: flex; /* Mantiene la alineación de tus tarjetas */
 }
-
 
 /* --- RESPONSIVE PARA EL CARRUSEL --- */
 @media screen and (max-width: 768px) {
-    .deslizador-carrusel .diapositiva.aktif {
-        flex-direction: column; /* Apila texto e imagen en móviles */
-        text-align: center;
-    }
-    .boton-prev, .boton-next {
-        font-size: 18px; /* Botones más pequeños en móvil */
-        padding: 12px;
-    }
+  .deslizador-carrusel .diapositiva.aktif {
+    flex-direction: column; /* Apila texto e imagen en móviles */
+    text-align: center;
+  }
+  .boton-prev,
+  .boton-next {
+    font-size: 18px; /* Botones más pequeños en móvil */
+    padding: 12px;
+  }
 }
 /* Contenedor de los puntos */
 .indicadores-carrusel {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    pointer-events: none; /* El usuario no puede interactuar con ellos */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  pointer-events: none; /* El usuario no puede interactuar con ellos */
 }
 
 /* Estilo de los puntos apagados */
 .punto {
-    height: 12px;
-    width: 12px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 /* Estilo del punto que indica la imagen activa */
 .punto.aktif {
-    background-color: black;  
+  background-color: black;
 }
 /* 1. Definimos el tamaño grande y anulamos la inclinación por defecto */
 .carrusel-grande .imagen-skew {
-    width: 300px;        
-    max-width: 100%;       /* Para móvil */
-    transform: none !important; /* Anulamos CUALQUIER inclinación heredada (skew) */
+  width: 300px;
+  max-width: 100%; /* Para móvil */
+  transform: none !important; /* Anulamos CUALQUIER inclinación heredada (skew) */
 }
 
 /* 2. Anulamos la animación y la inclinación al pasar el ratón (hover) */
 .carrusel-grande .imagen-skew:hover {
-    transform: none !important;
+  transform: none !important;
 }
 
 /* Opcional: Ajuste de la tarjeta si la imagen es muy grande */
 .carrusel-grande .tarjeta-experiencia {
-    max-width: 28rem;      /* Aumentamos el ancho de la tarjeta (era 22rem) */
+  max-width: 28rem; /* Aumentamos el ancho de la tarjeta (era 22rem) */
 }
 
 .parrafo {
-    font-size: 0.9rem;
-    margin-top: 16px;
+  font-size: 0.9rem;
+  margin-top: 16px;
 }
 
 /* Imagen con efectos, mis favoritosss */
 .contenedor-foto img {
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.7s ease; /* fluidez en la animación */
-    transform: translateX(-16px) translateY(12px); /*  se genera el desplazamiento */
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.7s ease; /* fluidez en la animación */
+  transform: translateX(-16px) translateY(12px); /*  se genera el desplazamiento */
 }
 .contenedor-foto img:hover {
-    transform: scale(1.3); /* La imagen crece al pasar el cursor, efectazo zoom */
+  transform: scale(1.3); /* La imagen crece al pasar el cursor, efectazo zoom */
 }
 /* Responsive básico */
 @media (max-width: 768px) {
-    .stage { grid-template-columns: 1fr; text-align: center; }
-    .titulo-inclinado { text-align: center; font-size: 2.5rem; }
-    .descripcion { margin: 0 auto; }
+  .stage {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .titulo-inclinado {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .descripcion {
+    margin: 0 auto;
+  }
 }
 
 /* ==========================================================================
@@ -369,7 +372,7 @@
 
 .footer-nav {
   display: flex; /* agrupo las columnas de enlaces */
-  gap: 50px;     /* con un espacio de 50px entre ellas. */
+  gap: 50px; /* con un espacio de 50px entre ellas. */
 }
 
 .footer-columna h4 {
@@ -412,415 +415,358 @@
    8. MEDIA QUERIES (RESPONSIVE)
    ========================================================================== */
 @media (max-width: 768px) {
-    .contenedor-menu {
-        height: 60px;       /* Reducimos la altura para ganar espacio visual */
-        padding: 0 15px;    /* Menos espacio interno lateral */
-        gap: 20px;          /* Reducimos mucho el espacio entre logo y enlaces */
-    }
-    .enlaces a {
-        font-size: 0.8rem;  /* Letra un poco más pequeña */
-        margin-right: 10px; /* Menos separación entre palabras */
-    }
-    .stage { 
-        display: block;          /* Quitamos el Grid para que no haya columnas */
-        text-align: center;      /* Centramos todo el contenido */
-        padding: 80px 20px 0;    /* Reducimos el padding lateral del 8% a 20px */
-    }
+  .contenedor-menu {
+    height: 60px; /* Reducimos la altura para ganar espacio visual */
+    padding: 0 15px; /* Menos espacio interno lateral */
+    gap: 20px; /* Reducimos mucho el espacio entre logo y enlaces */
+  }
+  .enlaces a {
+    font-size: 0.8rem; /* Letra un poco más pequeña */
+    margin-right: 10px; /* Menos separación entre palabras */
+  }
+  .stage {
+    display: block; /* Quitamos el Grid para que no haya columnas */
+    text-align: center; /* Centramos todo el contenido */
+    padding: 80px 20px 0; /* Reducimos el padding lateral del 8% a 20px */
+  }
 
-    .titulo-inclinado { 
-        text-align: center; 
-        font-size: 2.2rem;       /* Título más pequeño para que no desborde */
-        transform: none;         /* Quitamos la inclinación (skew) en móvil */
-        padding: 0;
-        margin-bottom: 20px;
-    }
+  .titulo-inclinado {
+    text-align: center;
+    font-size: 2.2rem; /* Título más pequeño para que no desborde */
+    transform: none; /* Quitamos la inclinación (skew) en móvil */
+    padding: 0;
+    margin-bottom: 20px;
+  }
 
-    .descripcion { 
-        margin: 0 auto;          /* ELIMINAMOS el margin-left: 50px */
-        max-width: 100%;         /* Que ocupe todo el ancho */
-        padding: 0;
-    }
+  .descripcion {
+    margin: 0 auto; /* ELIMINAMOS el margin-left: 50px */
+    max-width: 100%; /* Que ocupe todo el ancho */
+    padding: 0;
+  }
 
-    .parrafo {
-        font-size: 0.95rem;
-        line-height: 1.4;
-        white-space: normal;     /* Obligamos al texto a saltar de línea */
-    }
+  .parrafo {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: normal; /* Obligamos al texto a saltar de línea */
+  }
 
-    /* Ocultamos la foto para ganar espacio */
-    .stage-imagen, .contenedor-foto { 
-        display: none; 
-    }
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        text-align: center;
-    }
-    .footer-nav { /*distribución de horizontal a vertical*/
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+  /* Ocultamos la foto para ganar espacio */
+  .stage-imagen,
+  .contenedor-foto {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-nav {
+    /*distribución de horizontal a vertical*/
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 /*MARIA*/
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ==========================================================================
+   9. SECCIÓN PERSONAL DE MARÍA: PRODUCTOS, EQUIPO Y REGISTRO
+   Criterio 1: Código comentado y sin errores de anidamiento.
+   ========================================================================== */
 
-body { 
-    background-color: #ffffff; 
-    font-family: sans-serif; 
-    .subtitulo-zona {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-top: -30px; /* Esto lo acerca un poco al título principal */
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-}
-}
-
+/* Configuración base para el contenido de María */
 .contenedor-productos {
-    margin-top: 30px;
-    padding: 80px 5%;
-    text-align: center;
+  margin-top: 30px;
+  padding: 80px 5%;
+  text-align: center;
 }
 
 .titulo-seccion {
-    margin-bottom: 50px;
-    font-size: 2rem;
-    font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
+/* Corrección Karol: Clase fuera del body para evitar errores de cascada */
+.subtitulo-zona {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* EFECTO PARALLAX OBLIGATORIO (Criterio 4) */
+.banner-parallax {
+  background-image: url("../assets/rentez1.png");
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.banner-parallax h2 {
+  color: white;
+  font-size: 2.8rem;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+}
+
+/* TABLA OBLIGATORIA (Criterio 2: 2 col x 5 filas) */
+.contenedor-tabla {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  border: 2px solid #000;
+  padding: 15px;
+  text-align: left;
+}
+
+.tabla-precios th {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* LISTA NO NUMERADA OBLIGATORIA (Criterio 2) */
+.lista-beneficios {
+  list-style-type: square;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* --- TARJETAS DE PRODUCTO Y EQUIPO --- */
 .grid-productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-/*ESTILO DE TARJETA*/
 .tarjeta {
-    width: 340px;
-    background: white; 
-    border: 2px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 6px 6px 0px black;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 340px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0px black;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 .tarjeta:hover {
-    /* Elevamos la tarjeta hacia arriba */
-    transform: translateY(-12px);
-    /* Aumentamos la sombra para dar profundidad */
-    box-shadow: 12px 12px 0px black;
+  transform: translateY(-12px);
+  box-shadow: 12px 12px 0px black;
 }
 
-/* PARTE DE ARRIBA */
+/* Contenedores de Imagen (Arregla el tamaño gigante) */
 .contenedor-img-producto {
-    background: #000000;
-    height: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background: #000;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* La imagen con luz blanca para que la imagen resalte */
 .contenedor-img-producto img {
-    max-width: 85%;
-    max-height: 85%;
-    object-fit: contain;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
 }
 
-/* SOMBREADO NEÓN AZUL  */
-
+/* Brillos Neón */
 .tarjeta.neon-azul .contenedor-img-producto {
-    box-shadow: inset 0 0 25px rgba(0, 243, 255, 0.6);
+  box-shadow: inset 0 0 25px rgba(0, 243, 255, 0.6);
 }
-
-/*  SOMBREADO NEÓN ROSA */
 .tarjeta.neon-rosa .contenedor-img-producto {
-    box-shadow: inset 0 0 25px rgba(255, 0, 255, 0.6);
+  box-shadow: inset 0 0 25px rgba(255, 0, 255, 0.6);
 }
-
-/* SOMBREADO NEÓN ROJO */
 .tarjeta.neon-rojo .contenedor-img-producto {
-    box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.7);
+  box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.7);
 }
 
-/* PARTE DE ABAJO*/
+/* Detalles de Texto (Lo que se había roto) */
 .info-card {
-    padding: 20px;
-    background: white;
+  padding: 20px;
+  background: white;
 }
-
 .info-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
-
 .precio-negro {
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
-
 .detalle {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-    font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 0.9rem;
 }
-
-/* ICONOS PEQUEÑOS */
 .icono-pequeno {
-    width: 22px !important;
-    height: 22px !important;
-    margin-right: 10px;
-    object-fit: contain;
+  width: 22px !important;
+  height: 22px !important;
+  margin-right: 10px;
+  object-fit: contain;
 }
-
 .boton-alquiler {
-    display: inline-block;
-    margin-top: 15px;
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
+  display: inline-block;
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
 }
-/*  DISEÑO PAGINA EQUIPO: RESPETANDO PALETA DE COLORES */
 
+/* --- SECCIÓN EQUIPO --- */
 .tarjeta.equipo-negro {
-    background: #000000 !important; 
-    border: 2px solid #333;
-    box-shadow: 6px 6px 0px #222; 
+  background: #000 !important;
+  border: 2px solid #333;
+  box-shadow: 6px 6px 0px #222;
 }
-
 
 .contenedor-img-equipo {
-    background: #ffffff; /* Fondo del círculo blanco */
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    margin: 30px auto 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+  background: #fff;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 30px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* HALOS NEÓN SOBRE EL CÍRCULO BLANCO  RESPETANDO PALETA DE COLORES CONJUNTA */
-.tarjeta.neon-azul .contenedor-img-equipo { box-shadow: 0 0 20px rgba(0, 243, 255, 0.8); }
-.tarjeta.neon-rojo .contenedor-img-equipo { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
-.tarjeta.neon-verde .contenedor-img-equipo { box-shadow: 0 0 20px rgba(25, 255, 67, 0.8); }
-
-
-.foto-equipo, .foto-equipo2 {
-    width: 70% !important;
-    height: 70% !important;
-    object-fit: contain !important;
+/* Halos equipo */
+.tarjeta.neon-azul .contenedor-img-equipo {
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+}
+.tarjeta.neon-rojo .contenedor-img-equipo {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+.tarjeta.neon-verde .contenedor-img-equipo {
+  box-shadow: 0 0 20px rgba(25, 255, 67, 0.8);
 }
 
+.foto-equipo,
+.foto-equipo2 {
+  width: 70% !important;
+  height: 70% !important;
+  object-fit: contain !important;
+}
 .info-card-equipo {
-    padding: 20px;
-    text-align: left;
-    color: white; /* Todo el texto en blanco */
+  padding: 20px;
+  text-align: left;
+  color: white;
 }
-
 .info-card-equipo h3 {
-    font-size: 1.4rem;
-    margin-bottom: 5px;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
 }
-
 .info-card-equipo .puesto {
-    font-size: 1rem;
-    color: #bbb; 
-    margin-bottom: 15px;
-    font-style: italic;
+  font-size: 1rem;
+  color: #bbb;
+  font-style: italic;
 }
-
-.info-card-equipo .datos p {
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
 .icono-blanco {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    filter: invert(1); 
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  filter: invert(1);
 }
-/* --- ESTILO RECUADRO INFERIOR EQUIPO --- */
 
+/* Recuadro Misión */
 .recuadro-equipo-completo {
-    width: 100%;
-    max-width: 1080px; /* Suma de 3 tarjetas (340px) + gaps (30px) */
-    margin: 40px auto 0;
-    background: #000000;
-    border: 2px solid #333;
-    border-radius: 24px;
-    box-shadow: 8px 8px 0px #000;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease;
+  max-width: 1080px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 24px;
+  padding: 40px;
+  color: white;
 }
 
-.recuadro-equipo-completo:hover {
-    transform: translateY(-5px);
-}
-
-.contenido-recuadro {
-    padding: 40px;
-    text-align: center;
-    color: white;
-}
-
-.contenido-recuadro h3 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.contenido-recuadro p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #bbbbbb;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Efecto de halo neón sutil para el recuadro largo */
-.recuadro-equipo-completo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-}
-
-/* ACCESO: */
-
+/* --- ACCESO Y REGISTRO --- */
 .contenedor-acceso {
-    padding: 80px 5%;
-    text-align: center;
-    background-color: #ffffff;
+  padding: 80px 5%;
+  text-align: center;
 }
-
 .grid-acceso {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;     /* Esta funcionalidad permite bajar en móviles si no caben */
-    justify-content: center;
-    gap: 50px;         
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-
 .tarjeta.acceso.invertida {
-    width: 350px;
-    background: #000000; 
-    border: 2px solid black;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 8px 8px 0px black;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-align: left;
+  width: 350px;
+  background: #000;
+  border-radius: 24px;
+  box-shadow: 8px 8px 0px #000;
+  transition: 0.3s;
 }
-
-/* Efecto de movimiento como en el tipo producto */
-.tarjeta.acceso.invertida:hover {
-    transform: translateY(-15px);
-    box-shadow: 12px 12px 0px black;
-}
-
 .header-blanco {
-    background: #ffffff;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #000;
+  background: #fff;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #000;
 }
-
 .icono-tech {
-    width: 50% !important;
-    height: 50% !important;
-    object-fit: contain;
+  width: 50% !important;
+  height: 50% !important;
+  object-fit: contain;
 }
-
-/* Halos neón sobre fondo blanco para respetar paleta de color */
-.neon-azul .icono-tech { filter: drop-shadow(0 0 12px rgba(0, 243, 255, 0.8)); }
-.neon-rosa .icono-tech { filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.8)); }
-
 .cuerpo-negro {
-    padding: 30px;
-    color: white;
+  padding: 30px;
+  color: white;
 }
-
-.cuerpo-negro h3 {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-.form-acceso {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .grupo-input label {
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #aaaaaa;
-    margin-bottom: 6px;
-    display: block;
+  font-size: 0.75rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 6px;
 }
-
 .grupo-input input {
-    width: 100%;
-    padding: 12px;
-    background: #111111;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    color: white;
-    font-family: inherit;
-    outline: none;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
 }
-
-.neon-azul input:focus { border-color: #00f3ff; box-shadow: 0 0 10px rgba(0, 243, 255, 0.4); }
-.neon-rosa input:focus { border-color: #ff00ff; box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); }
-
 .boton-blanco {
-    width: 100%;
-    padding: 15px;
-    background: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: 4px 4px 0px #333;
-    transition: all 0.2s;
-}
-
-.boton-blanco:active {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #111;
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 10px;
 }
