@@ -73,21 +73,49 @@
     margin-right: auto;
 }
 
-/* Botón estilo píldora */
+/* Contenedor de botones */
+.contenedor-botones {
+    display: flex;
+    gap: 15px;            /* Espacio entre botones */
+    margin-top: 30px;
+    flex-wrap: wrap;      /* Para que en móviles muy pequeños bajen uno al otro */
+}
+
+/* Botón principal (Negro) */
 .boton-negro {
     display: inline-block;
     background: black;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s; /* cambio de color suave */
-    margin-top: 40px;
-}
-.boton-negro:hover {
-    background: #888; /* gris */
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2px solid black;
 }
 
+.boton-negro:hover {
+    background: #444;
+    border-color: #444;
+}
+
+/* Botón secundario (Solo borde) */
+.boton-linea {
+    display: inline-block;
+    background: transparent;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid black; /* Solo el contorno */
+    transition: 0.3s ease;
+}
+
+.boton-linea:hover {
+    background: black;
+    color: white;
+}
 /* ==========================================================================
    4. SECCIONES HERO Y PROCESO (USO EN TODAS LAS PÁGINAS)
    ========================================================================== */
