@@ -469,6 +469,15 @@
 body { 
     background-color: #ffffff; 
     font-family: sans-serif; 
+    .subtitulo-zona {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-top: -30px; /* Esto lo acerca un poco al título principal */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
 }
 
 .contenedor-productos {
@@ -500,6 +509,13 @@ body {
     overflow: hidden;
     box-shadow: 6px 6px 0px black;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta:hover {
+    /* Elevamos la tarjeta hacia arriba */
+    transform: translateY(-12px);
+    /* Aumentamos la sombra para dar profundidad */
+    box-shadow: 12px 12px 0px black;
 }
 
 /* PARTE DE ARRIBA */
@@ -601,6 +617,8 @@ body {
 /* HALOS NEÓN SOBRE EL CÍRCULO BLANCO  RESPETANDO PALETA DE COLORES CONJUNTA */
 .tarjeta.neon-azul .contenedor-img-equipo { box-shadow: 0 0 20px rgba(0, 243, 255, 0.8); }
 .tarjeta.neon-rojo .contenedor-img-equipo { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
+.tarjeta.neon-verde .contenedor-img-equipo { box-shadow: 0 0 20px rgba(25, 255, 67, 0.8); }
+
 
 .foto-equipo, .foto-equipo2 {
     width: 70% !important;
@@ -638,6 +656,58 @@ body {
     height: 18px;
     margin-right: 10px;
     filter: invert(1); 
+}
+/* --- ESTILO RECUADRO INFERIOR EQUIPO --- */
+
+.recuadro-equipo-completo {
+    width: 100%;
+    max-width: 1080px; /* Suma de 3 tarjetas (340px) + gaps (30px) */
+    margin: 40px auto 0;
+    background: #000000;
+    border: 2px solid #333;
+    border-radius: 24px;
+    box-shadow: 8px 8px 0px #000;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.recuadro-equipo-completo:hover {
+    transform: translateY(-5px);
+}
+
+.contenido-recuadro {
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.contenido-recuadro h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contenido-recuadro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bbbbbb;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Efecto de halo neón sutil para el recuadro largo */
+.recuadro-equipo-completo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
 }
 
 /* ACCESO: */
