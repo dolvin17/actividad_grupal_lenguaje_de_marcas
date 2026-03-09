@@ -28,7 +28,7 @@
     height: 80px;
     padding: 0 32px;
     border-radius: 9999px;          /* bordes totalmente redondeados */
-    max-width: 490px;               /* ancho máximo que queremos que tenga */
+    max-width: 600px;               /* ancho máximo que queremos que tenga */
     width: 90%;
 }
 /* Estilo de los enlaces */
@@ -166,15 +166,15 @@
     text-align: center;
 }
 .titulo-starting {
-    font-size: 2.25rem;
+    font-size: 1.8 rem;
     font-weight: bold;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 .texto-paso, .texto-descripcion {
-    font-size: 1.25rem;
-    max-width: 36rem;
-    margin: 32px auto 0;
-    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 30rem;
+    margin: 20px auto 0;
+    line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -231,7 +231,7 @@
 
 /* Contenedor principal para dar espacio */
 .contenedor-carrusel {
-    margin-top: 100px;
+    margin-top: none;
     position: relative;
     padding: 20px 0;
 }
@@ -312,7 +312,7 @@
 }
 
 .parrafo {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 16px;
 }
 
