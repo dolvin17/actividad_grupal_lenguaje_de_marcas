@@ -20,16 +20,16 @@ body {
 }
 /* El diseño de la navbar */
 .contenedor-menu {
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
-    backdrop-filter: blur(16px);     /* fondo transparente con desenfoque */
-    border: 1px solid white;       /* borde blanco de 1 pixel */
-    height: 80px;
-    padding: 0 32px;
-    border-radius: 9999px;          /* bordes totalmente redondeados */
-    max-width: 600px;               /* ancho máximo que queremos que tenga */
-    width: 90%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* fondo negro con opacidad */
+  backdrop-filter: blur(16px); /* fondo transparente con desenfoque */
+  border: 1px solid white; /* borde blanco de 1 pixel */
+  height: 80px;
+  padding: 0 32px;
+  border-radius: 9999px; /* bordes totalmente redondeados */
+  max-width: 465px; /* ancho máximo que queremos que tenga */
+  width: 90%;
 }
 /* Estilo de los enlaces */
 .enlaces a {
@@ -57,11 +57,6 @@ body {
 .big-container.fondo-oscuro {
   background-color: #000;
   color: #fff;
-}
-/* Corrección para permitir fondos oscuros */
-.big-container.fondo-oscuro {
-  background-color: #000;
-  color: #fff;
   text-align: center;
 }
 
@@ -72,50 +67,46 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 /* Contenedor de botones */
 .contenedor-botones {
-    display: flex;
-    gap: 15px;            /* Espacio entre botones */
-    margin-top: 30px;
-    flex-wrap: wrap;      /* Para que en móviles muy pequeños bajen uno al otro */
+  display: flex;
+  gap: 15px; /* Espacio entre botones */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Para que en móviles muy pequeños bajen uno al otro */
 }
-
 /* Botón principal (Negro) */
 .boton-negro {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-    border: 2px solid black;
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  border: 2px solid black;
 }
-
 .boton-negro:hover {
-    background: #444;
-    border-color: #444;
+  background: #444;
+  border-color: #444;
 }
-
 /* Botón secundario (Solo borde) */
 .boton-linea {
-    display: inline-block;
-    background: transparent;
-    color: black;
-    padding: 12px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    border: 2px solid black; /* Solo el contorno */
-    transition: 0.3s ease;
+  display: inline-block;
+  background: transparent;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid black; /* Solo el contorno */
+  transition: 0.3s ease;
+}
+.boton-linea:hover {
+  background: black;
+  color: white;
 }
 
-.boton-linea:hover {
-    background: black;
-    color: white;
-}
 /* ==========================================================================
    4. SECCIONES HERO Y PROCESO (USO EN TODAS LAS PÁGINAS)
    ========================================================================== */
@@ -190,15 +181,16 @@ body {
   text-align: center;
 }
 .titulo-starting {
-    font-size: 1.8 rem;
-    font-weight: bold;
-    margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
-.texto-paso, .texto-descripcion {
-    font-size: 1rem;
-    max-width: 30rem;
-    margin: 20px auto 0;
-    line-height: 1.5;
+.texto-paso,
+.texto-descripcion {
+  font-size: 1rem;
+  max-width: 30rem;
+  margin: 20px auto 0;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -253,9 +245,9 @@ body {
 
 /* Contenedor principal para dar espacio */
 .contenedor-carrusel {
-    margin-top: none;
-    position: relative;
-    padding: 20px 0;
+  margin-top: none;
+  position: relative;
+  padding: 20px 0;
 }
 
 /* El área de deslizamiento que contiene las tarjetas */
@@ -286,11 +278,6 @@ body {
   .deslizador-carrusel .diapositiva.aktif {
     flex-direction: column; /* Apila texto e imagen en móviles */
     text-align: center;
-  }
-  .boton-prev,
-  .boton-next {
-    font-size: 18px; /* Botones más pequeños en móvil */
-    padding: 12px;
   }
 }
 /* Contenedor de los puntos */
@@ -334,8 +321,8 @@ body {
 }
 
 .parrafo {
-    font-size: 1rem;
-    margin-top: 16px;
+  font-size: 1rem;
+  margin-top: 16px;
 }
 
 /* Imagen con efectos, mis favoritosss */
@@ -489,7 +476,7 @@ body {
     text-align: center;
   }
   .footer-nav {
-    /*distribución de horizontal a vertical*/
+    /* distribución de horizontal a vertical */
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -566,7 +553,6 @@ body {
   border: 2px solid #000;
   padding: 15px;
   text-align: left;
-
 }
 
 .tabla-precios th {
@@ -575,16 +561,6 @@ body {
   text-transform: uppercase;
   border: 1px solid white;
   border-radius: 9999px;
-}
-
-/* LISTA NO NUMERADA OBLIGATORIA (Criterio 2) */
-.lista-beneficios {
-  list-style-type: square;
-  padding: 20px;
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: left;
-  line-height: 1.8;
 }
 
 /* --- TARJETAS DE PRODUCTO Y EQUIPO --- */
@@ -604,9 +580,7 @@ body {
   overflow: hidden;
   box-shadow: 6px 6px 0px black;
   text-align: left;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta:hover {
@@ -666,13 +640,6 @@ body {
   height: 22px !important;
   margin-right: 10px;
   object-fit: contain;
-}
-.boton-alquiler {
-  display: inline-block;
-  margin-top: 15px;
-  color: black;
-  font-weight: bold;
-  text-decoration: underline;
 }
 
 /* --- SECCIÓN EQUIPO --- */
@@ -744,54 +711,54 @@ body {
 /* --- ESTILO RECUADRO INFERIOR EQUIPO --- */
 
 .recuadro-equipo-completo {
-    width: 100%;
-    max-width: 1080px; /* Suma de 3 tarjetas (340px) + gaps (30px) */
-    margin: 40px auto 0;
-    background: #000000;
-    border: 2px solid #333;
-    border-radius: 24px;
-    box-shadow: 8px 8px 0px #000;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 1080px; /* Suma de 3 tarjetas (340px) + gaps (30px) */
+  margin: 40px auto 0;
+  background: #000000;
+  border: 2px solid #333;
+  border-radius: 24px;
+  box-shadow: 8px 8px 0px #000;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 .recuadro-equipo-completo:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .contenido-recuadro {
-    padding: 40px;
-    text-align: center;
-    color: white;
+  padding: 40px;
+  text-align: center;
+  color: white;
 }
 
 .contenido-recuadro h3 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    color: #ffffff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .contenido-recuadro p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #bbbbbb;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #bbbbbb;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Efecto de halo neón sutil para el recuadro largo */
 .recuadro-equipo-completo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
 /* --- ACCESO Y REGISTRO --- */
@@ -821,8 +788,41 @@ body {
   justify-content: center;
   border-bottom: 2px solid #000;
 }
+
+/* Efecto de halo neón sobre el icono en el cabecero blanco */
+.neon-azul .icono-tech { 
+    filter: drop-shadow(0 0 12px rgba(0, 243, 255, 0.8)); 
+}
+
+.neon-rosa .icono-tech { 
+    filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.8)); 
+}
+
+/* Efecto neón en los bordes de los campos (input) al seleccionarlos */
+.neon-azul input:focus { 
+    border-color: #00f3ff; 
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.4); 
+}
+
+.neon-rosa input:focus { 
+    border-color: #ff00ff; 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); 
+}
+
+/* Estilo general de la tarjeta de acceso invertida */
+.tarjeta.acceso.invertida {
+    width: 350px;
+    background: #000000; 
+    border: 2px solid black;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 8px 8px 0px black;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+}
+
 .icono-tech {
-  width: 50% !important;
+  width: 50% !important; /* Quita cualquier preset heredado */
   height: 50% !important;
   object-fit: contain;
 }

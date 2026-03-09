@@ -26,7 +26,7 @@
           />
         </a>
         <nav class="enlaces">
-           <a href="comunidad.html">Inicio</a>
+          <a href="../index.html">Inicio</a>
           <a href="comunidad.html">Comunidad</a>
           <a href="uso.html">Cómo funciona</a>
           <a href="equipo.html">Equipo</a>
@@ -52,7 +52,6 @@
               />
             </div>
           </div>
-
           <div class="tarjeta-experiencia diapositiva">
             <div class="contenido-texto">
               <p class="titulo-proceso-renting">Únete a la Comunidad</p>
@@ -69,7 +68,6 @@
               />
             </div>
           </div>
-
           <div class="tarjeta-experiencia diapositiva">
             <div class="contenido-texto">
               <p class="titulo-proceso-renting">Vive Nuevas Aventuras</p>
@@ -86,7 +84,6 @@
               />
             </div>
           </div>
-
           <div class="tarjeta-experiencia diapositiva">
             <div class="contenido-texto">
               <p class="titulo-proceso-renting">Recupera tu Espacio</p>
@@ -114,7 +111,6 @@
     </section>
     <section class="big-container fondo-oscuro">
       <h2 class="titulo-starting">Lo que dicen nuestros usuarios</h2>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Gané dinero extra"</p>
@@ -125,7 +121,6 @@
           <p class="subtitulo">Carlos R.</p>
         </div>
       </div>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Ahorro increíble"</p>
@@ -136,7 +131,6 @@
           <p class="subtitulo">Lucía M.</p>
         </div>
       </div>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Muy fácil de usar"</p>
@@ -147,7 +141,6 @@
           <p class="subtitulo">Javier F.</p>
         </div>
       </div>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Mi trastero respira"</p>
@@ -158,7 +151,6 @@
           <p class="subtitulo">Marta S.</p>
         </div>
       </div>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Equipamiento Top"</p>
@@ -169,7 +161,6 @@
           <p class="subtitulo">Roberto G.</p>
         </div>
       </div>
-
       <div class="tarjeta-experiencia">
         <div class="contenido-texto">
           <p class="titulo-proceso-renting">"Confianza total"</p>
@@ -181,18 +172,19 @@
         </div>
       </div>
     </section>
-  <section class="big-container ">
-    <div class="starting-texto">
+    <section class="big-container">
+      <div class="starting-texto">
         <h2 class="titulo-starting">Compromiso</h2>
         <p class="texto-descripcion">
-            Alquilar artículos deportivos de alta gama en lugar de comprarlos es una
-            de las decisiones más responsables que puedes tomar por el planeta. Este
-            modelo de <strong>economía circular</strong> reduce drásticamente la huella de carbono al
-            extender la vida útil de equipos que, de otro modo, se fabricarían en
-            masa y terminarían acumulando polvo en un trastero.
+          Alquilar artículos deportivos de alta gama en lugar de comprarlos es
+          una de las decisiones más responsables que puedes tomar por el
+          planeta. Este modelo de <strong>economía circular</strong> reduce
+          drásticamente la huella de carbono al extender la vida útil de equipos
+          que, de otro modo, se fabricarían en masa y terminarían acumulando
+          polvo en un trastero.
         </p>
-    </div>
-</section>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer-logo">
         <img src="../assets/logo.svg" alt="RentEZ" />
@@ -244,30 +236,26 @@
       </nav>
     </footer>
     <script>
+      /* pequeño script para las imagenes del carrusel, mapeando un array de imagenes (lo hemos visto con Tomás) */
       let indice = 0;
       automatizarCarrusel();
-
       function automatizarCarrusel() {
         let i;
         let diapositivas = document.getElementsByClassName("diapositiva");
         let puntos = document.getElementsByClassName("punto");
-
         // Ocultar todas las diapositivas y apagar todos los puntos
         for (i = 0; i < diapositivas.length; i++) {
           diapositivas[i].classList.remove("aktif");
           if (puntos[i]) puntos[i].classList.remove("aktif");
         }
-
         // Avanzar al siguiente índice
         indice++;
         if (indice > diapositivas.length) {
           indice = 1;
         }
-
         // Mostrar diapositiva y punto actual
         diapositivas[indice - 1].classList.add("aktif");
         if (puntos[indice - 1]) puntos[indice - 1].classList.add("aktif");
-
         // Repetir cada 3 segundos
         setTimeout(automatizarCarrusel, 3000);
       }

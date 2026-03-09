@@ -1,199 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/estilos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <header class="menu-fijo">
-    <div class="contenedor-menu">
-      <a href="../index.html" class="logo">
-        <img src="../assets/logo.svg" alt="Logo RentEZ" height="50" width="70" />
-      </a>
-      <nav class="enlaces">
-        <a href="productos.html">Productos</a>
-        <a href="equipo.html">Equipo</a>
-        <a href="comunidad.html">Comunidad</a>
-        <a href="uso.html">Uso</a>
-        <a href="registro.html">Registro</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>RentEZ - Productos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="menu-fijo">
+      <div class="contenedor-menu">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/logo.svg"
+            alt="Logo RentEZ"
+            height="50"
+            width="70"
+          />
+        </a>
+        <nav class="enlaces">
+          <a href="../index.html">Inicio</a>
+          <a href="comunidad.html">Comunidad</a>
+          <a href="uso.html">Cómo funciona</a>
+          <a href="equipo.html">Equipo</a>
+        </nav>
+      </div>
+    </header>
+    <div class="banner-parallax">
+      <h2>Equípate con RentEZ</h2>
+    </div>
+    <section class="contenedor-productos">
+      <h2 class="titulo-seccion">EQUIPAMIENTO PARA ALQUILER</h2>
+      <p class="subtitulo-zona">
+        Estos son los productos disponibles en tu zona:
+      </p>
+      <div class="grid-productos">
+        <div class="tarjeta neon-azul">
+          <div class="contenedor-img-producto">
+            <img
+              src="../assets/onewheel-removebg-preview.png"
+              alt="Monociclo"
+            />
+          </div>
+          <div class="info-card">
+            <h3>Monociclo OneWheel</h3>
+            <p class="precio-negro">50€/día</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Madrid, Sur
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora2.png" class="icono-pequeno" />
+              Contacto: Cynthia
+            </p>
+          </div>
+        </div>
+        <div class="tarjeta neon-azul">
+          <div class="contenedor-img-producto">
+            <img src="../assets/patinete1.png" alt="Patinete" />
+          </div>
+          <div class="info-card">
+            <h3>Patinete Eléctrico</h3>
+            <p class="precio-negro">35€/día</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Valladolid
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora3.png" class="icono-pequeno" />
+              Contacto: Karol
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-productos">
+        <div class="tarjeta neon-rosa">
+          <div class="contenedor-img-producto">
+            <img src="../assets/kayak1.png" alt="Kayak" />
+          </div>
+          <div class="info-card">
+            <h3>Kayak Explorer</h3>
+            <p class="precio-negro">40€/día</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Valencia
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora1.png" class="icono-pequeno" />
+              Contacto: Maria
+            </p>
+          </div>
+        </div>
+        <div class="tarjeta neon-rosa">
+          <div class="contenedor-img-producto">
+            <img src="../assets/tabla-de-surf.png" alt="Tabla" />
+          </div>
+          <div class="info-card">
+            <h3>Tabla Paddle Surf</h3>
+            <p class="precio-negro">25€/día</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Alicante
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora1.png" class="icono-pequeno" />
+              Contacto: Maria
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-productos">
+        <div class="tarjeta neon-rojo">
+          <div class="contenedor-img-producto">
+            <img src="../assets/boxeo.png" alt="Boxeo musical" />
+          </div>
+          <div class="info-card">
+            <h3>Boxeo musical</h3>
+            <p class="precio-negro">5€/dia</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Madrid, Norte
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora3.png" class="icono-pequeno" />
+              Contacto: Karol
+            </p>
+          </div>
+        </div>
+        <div class="tarjeta neon-rojo">
+          <div class="contenedor-img-producto">
+            <img src="../assets/bici.png" alt="Rodillo de Ciclismo" />
+          </div>
+          <div class="info-card">
+            <h3>Rodillo de Ciclismo</h3>
+            <p class="precio-negro">10€/día</p>
+            <p class="detalle">
+              <img src="../assets/ubicacion.png" class="icono-pequeno" />
+              Madrid, Centro
+            </p>
+            <p class="detalle">
+              <img src="../assets/entrenadora2.png" class="icono-pequeno" />
+              Contacto: Cynthia
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-tabla">
+        <h3 class="titulo-tabla">Tarifas de Protección de Equipo</h3>
+        <table class="tabla-precios">
+          <thead>
+            <tr>
+              <th>Tipo de Equipamiento</th>
+              <th>Seguro Todo Riesgo (Día)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monociclos y Patinetes</td>
+              <td>8,50€</td>
+            </tr>
+            <tr>
+              <td>Tablas de Surf / Paddle</td>
+              <td>5,00€</td>
+            </tr>
+            <tr>
+              <td>Kayaks y Canoas</td>
+              <td>12,00€</td>
+            </tr>
+            <tr>
+              <td>Bicicletas y Rodillos</td>
+              <td>7,00€</td>
+            </tr>
+            <tr>
+              <td>Equipo de Boxeo / Gimnasio</td>
+              <td>3,00€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="../assets/logo.svg" alt="RentEZ" />
+      </div>
+      <div class="footer-contacto">
+        <p>cynmarka@gmail.com</p>
+        <div class="iconos-sociales">
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a
+            href="https://github.com/dolvin17/actividad_grupal_lenguaje_de_marcas"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <div class="footer-columna">
+          <h4>Servicios</h4>
+          <ul>
+            <li>Alquiler</li>
+            <li>Compra</li>
+          </ul>
+        </div>
+        <div class="footer-columna">
+          <h4>Acerca</h4>
+          <ul>
+            <li>Deportes</li>
+            <li>Marcas</li>
+            <li>Devoluciones</li>
+          </ul>
+        </div>
+        <div class="footer-columna">
+          <h4>Soporte</h4>
+          <ul>
+            <li>FAQ</li>
+            <li>Contacto</li>
+          </ul>
+        </div>
+        <div class="footer-columna">
+          <h4>Reglamento</h4>
+          <ul>
+            <li>Privacidad</li>
+            <li>T&C</li>
+            <li>Aviso legal</li>
+          </ul>
+        </div>
       </nav>
-    </div>
-  </header>
-  <div class="banner-parallax">
-<h2>Equípate con RentEZ</h2>
-</div>
-
-  <section class="contenedor-productos">
-    <h2 class="titulo-seccion">EQUIPAMIENTO PARA ALQUILER</h2>
-    <p class="subtitulo-zona">Estos son los productos disponibles en tu zona:</p>
-
-    <div class="grid-productos">
-      <div class="tarjeta neon-azul">
-        <div class="contenedor-img-producto">
-          <img src="../assets/onewheel-removebg-preview.png" alt="Monociclo">
-        </div>
-        <div class="info-card">
-          <h3>Monociclo OneWheel</h3>
-          <p class="precio-negro">50€/día</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Madrid, Sur</p>
-          <p class="detalle"><img src="../assets/entrenadora2.png" class="icono-pequeno"> Contacto: Cynthia</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-      <div class="tarjeta neon-azul">
-        <div class="contenedor-img-producto">
-          <img src="../assets/patinete1.png" alt="Patinete">
-        </div>
-        <div class="info-card">
-          <h3>Patinete Eléctrico</h3>
-          <p class="precio-negro">35€/día</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Valladolid</p>
-          <p class="detalle"><img src="../assets/entrenadora3.png" class="icono-pequeno"> Contacto: Karol</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-productos">
-      <div class="tarjeta neon-rosa">
-        <div class="contenedor-img-producto">
-          <img src="../assets/kayak1.png" alt="Kayak">
-        </div>
-        <div class="info-card">
-          <h3>Kayak Explorer</h3>
-          <p class="precio-negro">40€/día</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Valencia</p>
-          <p class="detalle"><img src="../assets/entrenadora1.png" class="icono-pequeno"> Contacto: Maria</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-      <div class="tarjeta neon-rosa">
-        <div class="contenedor-img-producto">
-          <img src="../assets/tabla-de-surf.png" alt="Tabla">
-        </div>
-        <div class="info-card">
-          <h3>Tabla Paddle Surf</h3>
-          <p class="precio-negro">25€/día</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Alicante</p>
-          <p class="detalle"><img src="../assets/entrenadora1.png" class="icono-pequeno"> Contacto: Maria</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-productos">
-      <div class="tarjeta neon-rojo">
-        <div class="contenedor-img-producto">
-          <img src="../assets/boxeo.png" alt="Boxeo musical">
-        </div>
-        <div class="info-card">
-          <h3>Boxeo musical</h3>
-          <p class="precio-negro">5€/dia</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Madrid, Norte</p>
-          <p class="detalle"><img src="../assets/entrenadora3.png" class="icono-pequeno"> Contacto: Karol</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-      <div class="tarjeta neon-rojo">
-        <div class="contenedor-img-producto">
-          <img src="../assets/bici.png" alt="Rodillo de Ciclismo">
-        </div>
-        <div class="info-card">
-          <h3>Rodillo de Ciclismo</h3>
-          <p class="precio-negro">10€/día</p>
-          <p class="detalle"><img src="../assets/ubicacion.png" class="icono-pequeno"> Madrid, Centro</p>
-          <p class="detalle"><img src="../assets/entrenadora2.png" class="icono-pequeno"> Contacto: Cynthia</p>
-          <a href="#" class="boton-alquiler">Ver disponibilidad</a>
-        </div>
-      </div>
-    </div>
-    <div class="contenedor-tabla">
-    <h3 class="titulo-tabla">Tarifas de Protección de Equipo</h3>
-    <table class="tabla-precios">
-        <thead>
-            <tr>
-                <th>Tipo de Equipamiento</th>
-                <th>Seguro Todo Riesgo (Día)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Monociclos y Patinetes</td>
-                <td>8,50€</td>
-            </tr>
-            <tr>
-                <td>Tablas de Surf / Paddle</td>
-                <td>5,00€</td>
-            </tr>
-            <tr>
-                <td>Kayaks y Canoas</td>
-                <td>12,00€</td>
-            </tr>
-            <tr>
-                <td>Bicicletas y Rodillos</td>
-                <td>7,00€</td>
-            </tr>
-            <tr>
-                <td>Equipo de Boxeo / Gimnasio</td>
-                <td>3,00€</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-  </section>
-  <footer class="footer">
-    <div class="footer-logo">
-      <img src="../assets/logo.svg" alt="RentEZ" />
-    </div>
-    <div class="footer-contacto">
-      <p>cynmarka@gmail.com</p>
-      <div class="iconos-sociales">
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/dolvin17/actividad_grupal_lenguaje_de_marcas"><i
-            class="fa-brands fa-github"></i></a>
-      </div>
-    </div>
-    <nav class="footer-nav">
-      <div class="footer-columna">
-        <h4>Servicios</h4>
-        <ul>
-          <li>Alquiler</li>
-          <li>Compra</li>
-        </ul>
-      </div>
-      <div class="footer-columna">
-        <h4>Acerca</h4>
-        <ul>
-          <li>Deportes</li>
-          <li>Marcas</li>
-          <li>Devoluciones</li>
-        </ul>
-      </div>
-      <div class="footer-columna">
-        <h4>Soporte</h4>
-        <ul>
-          <li>FAQ</li>
-          <li>Contacto</li>
-        </ul>
-      </div>
-      <div class="footer-columna">
-        <h4>Reglamento</h4>
-        <ul>
-          <li>Privacidad</li>
-          <li>T&C</li>
-          <li>Aviso legal</li>
-        </ul>
-      </div>
-    </nav>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
